@@ -24,4 +24,4 @@ class Person(object):
 		return lib.Person_delete(self.obj)
 
 	def fib(self):
-		return lib.Person.fibhelp(self.obj)
+		return lib.Person_fibhelp(self.obj)
