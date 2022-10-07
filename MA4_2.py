@@ -22,12 +22,12 @@ def main():
 	f = Person(5)
 	print(f.get())
 	f.set(7)
-	toTest = np.arange(30, 45)
+	toTest = np.arange(30, 46)
 	print(toTest)
 	resCpp = np.array
 	print(resCpp)
 	#Time for fib in c++
-	for i in range(toTest):
+	for i in toTest:
 		f.set(i)
 		start = t.perf_counter()
 		f.fib()
