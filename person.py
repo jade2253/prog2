@@ -1,5 +1,9 @@
 """ Python interface to the C++ Person class """
 import ctypes
+from stat import FILE_ATTRIBUTE_REPARSE_POINT
+
+from paramiko import Agent
+from sympy import N
 lib = ctypes.cdll.LoadLibrary('./libperson.so')
 
 class Person(object):
@@ -25,3 +29,5 @@ class Person(object):
 
 	def fib(self):
 		return lib.Person_fibhelp(self.obj)
+	
+	
