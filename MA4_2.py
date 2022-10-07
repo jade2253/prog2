@@ -21,6 +21,8 @@ def main():
 	print(f.get())
 	f.set(7)
 	res = f.fib()
+	print(fib_py(7))
+	print(fib_numba(7))
 	print(res)
 	print(f.get())
 
