@@ -1,7 +1,5 @@
 #!/usr/bin/env python3.9
-from urllib import response
 from numba import njit
-from sympy import total_degree
 from person import Person
 import time as t
 import matplotlib as plt
