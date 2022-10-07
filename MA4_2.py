@@ -2,6 +2,7 @@
 from numba import njit
 from person import Person
 import time as t
+
 def fib_py(n):
 	if n <= 1:
 		return n
