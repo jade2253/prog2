@@ -32,6 +32,7 @@ def main():
 		start = t.perf_counter()
 		f.fib()
 		end = t.perf_counter()
+		print(start-end)
 		np.append(resCpp, start-end)
 	print(resCpp)
 	
