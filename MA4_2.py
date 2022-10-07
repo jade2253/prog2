@@ -23,6 +23,7 @@ def main():
 	print(f.get())
 	f.set(7)
 	toTest = np.arange(30, 45)
+	print(toTest)
 	resCpp = np.array
 	print(resCpp)
 	#Time for fib in c++
