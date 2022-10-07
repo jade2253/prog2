@@ -1,5 +1,7 @@
 #!/usr/bin/env python3.9
+from urllib import response
 from numba import njit
+from sympy import total_degree
 from person import Person
 import time as t
 import matplotlib as plt
@@ -32,10 +34,24 @@ def main():
 		start = t.perf_counter()
 		f.fib()
 		end = t.perf_counter()
-		print(end - start)
-		np.append(resCpp, end - start)
+		resCpp = np.append(resCpp, end - start)
 	print(resCpp)
-	
+	#Time for fib with Numba
+	resNumba = np.array([])
+	for i in toTest:
+		start = t.perf_counter()
+		fib_numba(i)
+		end = t.perf_counter()
+		resNumba = np.append(resNumba, end - start)
+	print(resNumba)
+	#Time for fib with python
+	resPy = np.array([])
+	for i in toTest:
+		start = t.perf_counter()
+		fib_py(i)
+		end = t.perf_counter()
+		resPy = np.append(resPy, end - start)
+	print(resPy)
 	print(fib_py(7))
 	print(fib_numba(7))
 	print(f.get())
