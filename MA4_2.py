@@ -50,6 +50,13 @@ def main():
 		end = t.perf_counter()
 		resPy = np.append(resPy, end - start)
 	print(resPy)
+
+	fig, ax = plt.subplots(1)
+	ax.plot(resNumba, 20)
+	ax.plot(resCpp, 20)
+	ax.plot(resPy, 20)
+	ax.legend(['Numba', 'Cpp', 'Python'])
+	fig.savefig('Time to compute Fib')
 	print(fib_py(7))
 	print(fib_numba(7))
 	print(f.get())
