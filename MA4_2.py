@@ -32,7 +32,7 @@ def main():
 		start = t.perf_counter()
 		f.fib()
 		end = t.perf_counter()
-		resCpp = np.append(start-end)
+		np.append(resCpp, start-end)
 	print(resCpp)
 	
 	print(fib_py(7))
