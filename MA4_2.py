@@ -24,7 +24,7 @@ def main():
 	f.set(7)
 	toTest = np.arange(30, 46)
 	print(toTest)
-	resCpp = np.array
+	resCpp = np.array([])
 	print(resCpp)
 	#Time for fib in c++
 	for i in toTest:
