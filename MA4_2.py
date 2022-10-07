@@ -20,7 +20,7 @@ def main():
 	f = Person(5)
 	print(f.get())
 	f.set(7)
-	f.fib(f.get())
+	f.fib()
 	print(f.get())
 
 if __name__ == '__main__':
