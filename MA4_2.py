@@ -2,7 +2,7 @@
 from numba import njit
 from person import Person
 import time as t
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 def fib_py(n):
