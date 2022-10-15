@@ -59,9 +59,7 @@ def main():
 	plt.xlabel('Fib number')
 	plt.ylabel('Time[s]')
 	plt.savefig('Time to compute Fib')
-	print(fib_py(7))
-	print(fib_numba(7))
-	print(f.get())
+	print(fib_numba(47))
 
 if __name__ == '__main__':
 	main()
