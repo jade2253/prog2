@@ -51,7 +51,7 @@ def main():
 	# 	resPy = np.append(resPy, end - start)
 	# print(resPy)
 
-	plt.plot(20, resNumba)
+	plt.plot(toTest, resNumba)
 	# plt.plot(resCpp, 20)
 	# ax.plot(resPy, 20)
 	plt.legend(['Numba', 'Cpp'])
