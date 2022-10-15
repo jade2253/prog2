@@ -44,7 +44,7 @@ def main():
 	print(resNumba)
 	#Time for fib with python
 	resPy = np.array([])
-	for i in toTest:
+	for i in (toTest-6):
 		start = t.perf_counter()
 		fib_py(i)
 		end = t.perf_counter()
