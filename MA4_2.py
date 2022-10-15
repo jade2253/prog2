@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.9
+#!/usr/bin/env python3
 from numba import njit
 from person import Person
 import time as t
@@ -43,20 +43,19 @@ def main():
 		resNumba = np.append(resNumba, end - start)
 	print(resNumba)
 	#Time for fib with python
-	resPy = np.array([])
-	for i in (toTest-6):
-		start = t.perf_counter()
-		fib_py(i)
-		end = t.perf_counter()
-		resPy = np.append(resPy, end - start)
-	print(resPy)
+	# resPy = np.array([])
+	# for i in (toTest-6):
+	# 	start = t.perf_counter()
+	# 	fib_py(i)
+	# 	end = t.perf_counter()
+	# 	resPy = np.append(resPy, end - start)
+	# print(resPy)
 
-	fig, ax = plt.subplots(1)
-	ax.plot(resNumba, 20)
-	ax.plot(resCpp, 20)
-	ax.plot(resPy, 20)
-	ax.legend(['Numba', 'Cpp', 'Python'])
-	fig.savefig('Time to compute Fib')
+	plt.plot(resNumba, 20)
+	plt.plot(resCpp, 20)
+	# ax.plot(resPy, 20)
+	plt.legend(['Numba', 'Cpp'])
+	plt.savefig('Time to compute Fib')
 	print(fib_py(7))
 	print(fib_numba(7))
 	print(f.get())
