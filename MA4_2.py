@@ -51,7 +51,7 @@ def main():
 		resPy = np.append(resPy, end - start)
 	print(resPy)
 
-	plt.plot(toTest, resNumba, 'ro', toTest, resCpp, 'bo', toTest-6, resPy, 'go')
+	plt.plot(toTest, resNumba, 'ro', toTest, resCpp, 'bo', pyToTest, resPy, 'go')
 	plt.legend(['Numba', 'Cpp', 'Py'])
 	plt.title('Time to compute Fib')
 	plt.xlabel('Fib number')
