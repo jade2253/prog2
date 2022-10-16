@@ -22,7 +22,7 @@ def main():
 	f = Person(5)
 	print(f.get())
 	f.set(7)
-	toTest = np.arange(30, 46)
+	toTest = np.arange(20, 46)
 	print(toTest)
 	resCpp = np.array([])
 	#Time for fib in c++
@@ -59,6 +59,7 @@ def main():
 	print(fib_numba(47))
 	f.set(47)
 	print(f.fib())
-
+	#Fib47 with cpp gives -1323752223 and with numba 2971215073. Due to memory issues, when it reaches it's limit it's starts from the lowest value and starts adding numbers
+	#to that, therefor we get a negative answer. 
 if __name__ == '__main__':
 	main()
