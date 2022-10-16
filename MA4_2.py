@@ -25,7 +25,6 @@ def main():
 	toTest = np.arange(30, 46)
 	print(toTest)
 	resCpp = np.array([])
-	print(resCpp)
 	#Time for fib in c++
 	for i in toTest:
 		f.set(i)
@@ -52,14 +51,14 @@ def main():
 	print(resPy)
 
 	plt.plot(toTest, resNumba, toTest, resCpp, toTest-6, resPy)
-	# plt.plot(resCpp, 20)
-	# ax.plot(resPy, 20)
 	plt.legend(['Numba', 'Cpp', 'Py'])
 	plt.title('Time to compute Fib')
 	plt.xlabel('Fib number')
 	plt.ylabel('Time[s]')
 	plt.savefig('Time to compute Fib')
 	print(fib_numba(47))
+	f.set(47)
+	print(f.fib())
 
 if __name__ == '__main__':
 	main()
