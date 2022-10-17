@@ -56,11 +56,22 @@ def main():
 	plt.title('Time to compute Fib')
 	plt.xlabel('Fib number')
 	plt.ylabel('Time[s]')
+	plt.xlim(30, 47)
 	plt.savefig('Time to compute Fib')
+
+	plt.plot(toTest - 15, resNumba - 15, 'ro', pyToTest- 10, resPy - 10, 'go')
+	plt.legend(['Numba', 'Py'])
+	plt.title('Time to compute Fib')
+	plt.xlabel('Fib number')
+	plt.ylabel('Time[s]')
+	plt.xlim(20, 30)
+	plt.savefig('Time to compute Fib20')
+
 	print(fib_numba(47))
 	f.set(47)
 	print(f.fib())
 	#Fib47 with cpp gives -1323752223 and with numba 2971215073. Due to memory issues, when it reaches it's limit it's starts from the lowest value and starts adding numbers
-	#to that, therefor we get a negative answer. 
+	#to that, therefor we get a negative answer. This is called Int overflow.
+	#
 if __name__ == '__main__':
 	main()
